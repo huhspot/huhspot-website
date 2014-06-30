@@ -1,0 +1,63 @@
+.hero {
+  $hero-background: desaturate(darken($base-accent-color, 20), 30);
+  $hero-color: white;
+
+  @include outer-container;
+  background-image: url(../images/mood.png);
+  background-size: cover;
+  min-height: 50vh;
+
+  @include media($medium-screen) {
+    background-size: cover;
+    min-height: 100vh;
+  }
+
+  .hero-inner {
+    padding: 3em;
+    text-align: center;
+    color: $hero-color;
+
+    @include media($medium-screen) {
+      height: 320px;
+      margin: auto;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+    }
+
+    button {
+      font-size: $base-font-size;
+      outline: none;
+      padding-left: 3em;
+      padding-right: 3em;
+      border-bottom: 2px solid $medium-gray;
+
+      &:hover {
+      }
+    }
+
+    .hero-copy {
+      text-align: center;
+      text-shadow: #000 0 1px 0;
+
+      h1 {
+        margin-bottom: 1em;
+
+        @include media($large-screen) {
+        }
+      }
+
+      h2 {
+        margin: auto;
+        margin-bottom: 2em;
+
+        @include media($large-screen) {
+          max-width: 40%;
+        }
+      }
+    }
+  }
+}
