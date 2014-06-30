@@ -10,3 +10,10 @@ $max-width: 100%;
 
 @import "landing";
 @import "footer";
+@import "main";
+@import "team";
+
+.copy {
+  text-align: center;
+  padding: 3em;
+}
