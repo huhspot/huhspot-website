@@ -2,7 +2,7 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
 @import url(http://fonts.googleapis.com/css?family=Abel);
 
-$visual_grid: true;
+// $visual_grid: true;
 $max-width: 100%;
 
 @import "bourbon";
@@ -13,6 +13,26 @@ $max-width: 100%;
 @import "footer";
 @import "main";
 @import "team";
+
+// Animations
+@include keyframes(bounceIn) {
+  0% {
+    @include transform(scale(0));
+    opacity: 0;
+  }
+  50% {
+    @include transform(scale(0));
+    opacity: 0;
+  }
+  82.5% {
+    @include transform(scale(1.030));
+    @include animation-timing-function(ease-out);
+    opacity: 1;
+  }
+  100% {
+    @include transform(scale(1));
+  }
+}
 
 .copy {
   text-align: center;
