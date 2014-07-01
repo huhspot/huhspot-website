@@ -1,15 +1,19 @@
+// http://thecodeplayer.com/walkthrough/perspective-mockups-css3-3d-transforms
 
 .isometric {
   @include perspective(3000);
-  height: 100vh;
+  height: 700px;
   position: relative;
   overflow: hidden;
-  background: #333;
+  background: #eee;
+  box-shadow: inset 0 20px 50px -20px rgba(0,0,0,.1);
 
   .grid {
-    position: absolute; top: 100px; left: 0;
-    /*Width = (225 + 20 + 20) * 4 = 1060*/
-    width: 1060px;
+    $width: (225px + 20px + 20px) * 4; // 1060
+    width: $width;
+    margin-left: -$width / 2 + 40px;
+
+    position: absolute; top: 80px; left: 50%;
     /*3D Transform*/
     @include transform(rotateX(60deg) rotateZ(-50deg));
     /*Preserve 3D style for children*/
@@ -54,8 +58,8 @@
     position: absolute;
     /*30px smaller from each side*/
     top: 30px; left: 30px; right: 30px; bottom: 30px;
-    background: rgba(0, 0, 0, 0.5);
-    box-shadow: 0 0 30px 30px rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 30px 30px rgba(0, 0, 0, 0.15);
     /*Pushing down the shadow to give an elevated feel*/
     @include transform(translateZ(-50px));
   }
