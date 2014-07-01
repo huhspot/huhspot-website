@@ -19,7 +19,6 @@
     color: $hero-color;
 
     @include media($medium-screen) {
-      // height: 320px;
       margin: auto;
       position: absolute;
       top: 0;
