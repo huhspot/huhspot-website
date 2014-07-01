@@ -73,5 +73,13 @@
     margin: auto;
     max-width: 35em;
     text-align: center;
+
+    a {
+      color: #689fb5;
+
+      &:hover {
+        color: white;
+      }
+    }
   }
 }
