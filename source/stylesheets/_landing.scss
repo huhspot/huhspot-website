@@ -3,7 +3,7 @@
   $hero-color: white;
 
   @include outer-container;
-  background: url(../images/mood.png) center center;
+  background: url(../images/mood.jpg) center center;
   background-size: cover;
   min-height: 50vh;
   position: relative;
@@ -53,7 +53,8 @@
         font-size: 2em;
 
         @include media($large-screen) {
-          max-width: 50%;
+          width: 50%;
+          max-width: 830px;
           font-size: 3em;
         }
       }
