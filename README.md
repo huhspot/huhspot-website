@@ -24,8 +24,9 @@ Website for Huh? &amp; Huhspot made with Middleman
 5. ask me why it's not working
 
 ## Deploying
-This prototype is configured to deploy to Github pages through the gh-pages branch of this repository. 
-Run the following to deploy to http://huhspot.github.io/huhspot-website
+*Warning: do __not__ merge `development` to `master`*
+This prototype is configured to deploy to Github pages through the __master__ branch of this repository. 
+Run the following to deploy to http://huhspot.github.io/
 
 ```
 $ middleman build 
