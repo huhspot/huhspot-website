@@ -497,90 +497,226 @@ input[type="submit"] {
   background-size: cover;
   min-height: 50vh; }
 
+/* line 3, /Users/Hugo/git/huhspot.github.io/source/stylesheets/_isometric.css.scss */
+.isometric {
+  -webkit-perspective: 3000;
+  -moz-perspective: 3000;
+  perspective: 3000;
+  -webkit-animation: bounceIn 0.9s;
+  -moz-animation: bounceIn 0.9s;
+  animation: bounceIn 0.9s;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+  background: #eee;
+  box-shadow: inset 0 20px 50px -20px rgba(0, 0, 0, 0.1);
+  /*Left and Bottom Sides*/
+  /*Left Side*/
+  /*Bottom Side*/
+  /*Shadow time - sadly all pseudo elements are used so we will have to add an HTML element in each LI*/
+  /*We will add a light gradient to the sides to give some lighting effect*/ }
+  /* line 12, /Users/Hugo/git/huhspot.github.io/source/stylesheets/_isometric.css.scss */
+  .isometric .right {
+    position: absolute;
+    margin: 0 auto;
+    right: 0;
+    left: 60%;
+    top: 0;
+    bottom: 0; }
+    /* line 20, /Users/Hugo/git/huhspot.github.io/source/stylesheets/_isometric.css.scss */
+    .isometric .right p {
+      font-size: 1.618em;
+      font-weight: 200; }
+  /* line 26, /Users/Hugo/git/huhspot.github.io/source/stylesheets/_isometric.css.scss */
+  .isometric .grid {
+    margin-left: -225px;
+    position: absolute;
+    top: 0px;
+    left: 20%;
+    /*3D Transform*/
+    -webkit-transform: rotateX(60deg) rotateZ(-50deg);
+    -moz-transform: rotateX(60deg) rotateZ(-50deg);
+    -ms-transform: rotateX(60deg) rotateZ(-50deg);
+    -o-transform: rotateX(60deg) rotateZ(-50deg);
+    transform: rotateX(60deg) rotateZ(-50deg);
+    /*Preserve 3D style for children*/
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d; }
+  /* line 37, /Users/Hugo/git/huhspot.github.io/source/stylesheets/_isometric.css.scss */
+  .isometric .grid li {
+    height: 400px;
+    width: 225px;
+    float: left;
+    margin: 20px;
+    list-style-type: none;
+    /*Hide the lighting gradient from the front face*/
+    background-size: 0, cover;
+    /*Preserve 3D style for children(pseudo elements)*/
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d; }
+  /* line 47, /Users/Hugo/git/huhspot.github.io/source/stylesheets/_isometric.css.scss */
+  .isometric .grid li:before, .isometric .grid li:after {
+    content: '';
+    position: absolute;
+    /*100% height and width*/
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    background-size: cover; }
+  /* line 56, /Users/Hugo/git/huhspot.github.io/source/stylesheets/_isometric.css.scss */
+  .isometric .grid li:before {
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -ms-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+    -webkit-transform: rotateY(90deg);
+    -moz-transform: rotateY(90deg);
+    -ms-transform: rotateY(90deg);
+    -o-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+    /*Reducing the width of the left side for a flat feel*/
+    width: 5px; }
+  /* line 63, /Users/Hugo/git/huhspot.github.io/source/stylesheets/_isometric.css.scss */
+  .isometric .grid li:after {
+    -webkit-transform-origin: bottom center;
+    -moz-transform-origin: bottom center;
+    -ms-transform-origin: bottom center;
+    -o-transform-origin: bottom center;
+    transform-origin: bottom center;
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    -ms-transform: rotateX(90deg);
+    -o-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+    /*Reducing the height*/
+    height: 5px;
+    top: auto;
+    bottom: 0;
+    /*Background fix - start the background from the bottom*/
+    background-position: bottom center; }
+  /* line 72, /Users/Hugo/git/huhspot.github.io/source/stylesheets/_isometric.css.scss */
+  .isometric .s {
+    position: absolute;
+    /*30px smaller from each side*/
+    top: 30px;
+    left: 30px;
+    right: 30px;
+    bottom: 30px;
+    background: rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 30px 30px rgba(0, 0, 0, 0.15);
+    /*Pushing down the shadow to give an elevated feel*/
+    -webkit-transform: translateZ(-50px);
+    -moz-transform: translateZ(-50px);
+    -ms-transform: translateZ(-50px);
+    -o-transform: translateZ(-50px);
+    transform: translateZ(-50px); }
+  /* line 83, /Users/Hugo/git/huhspot.github.io/source/stylesheets/_isometric.css.scss */
+  .isometric .one {
+    background-image: -webkit-linear-gradient(-315deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../images/screen1.png");
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../images/screen1.png"); }
+  /* line 87, /Users/Hugo/git/huhspot.github.io/source/stylesheets/_isometric.css.scss */
+  .isometric .two {
+    background-image: -webkit-linear-gradient(-315deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../images/screen2.png");
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../images/screen2.png"); }
+
 @-webkit-keyframes bounceIn {
-  /* line 19, /Users/Hugo/git/huhspot.github.io/source/stylesheets/all.css.scss */
+  /* line 20, /Users/Hugo/git/huhspot.github.io/source/stylesheets/all.css.scss */
   0% {
     -webkit-transform: scale(0);
     opacity: 0; }
 
-  /* line 23, /Users/Hugo/git/huhspot.github.io/source/stylesheets/all.css.scss */
+  /* line 24, /Users/Hugo/git/huhspot.github.io/source/stylesheets/all.css.scss */
   50% {
     -webkit-transform: scale(0);
     opacity: 0; }
 
-  /* line 27, /Users/Hugo/git/huhspot.github.io/source/stylesheets/all.css.scss */
+  /* line 28, /Users/Hugo/git/huhspot.github.io/source/stylesheets/all.css.scss */
   82.5% {
     -webkit-transform: scale(1.03);
     -webkit-animation-timing-function: ease-out;
     opacity: 1; }
 
-  /* line 32, /Users/Hugo/git/huhspot.github.io/source/stylesheets/all.css.scss */
+  /* line 33, /Users/Hugo/git/huhspot.github.io/source/stylesheets/all.css.scss */
   100% {
     -webkit-transform: scale(1); } }
 
 @-moz-keyframes bounceIn {
-  /* line 19, /Users/Hugo/git/huhspot.github.io/source/stylesheets/all.css.scss */
+  /* line 20, /Users/Hugo/git/huhspot.github.io/source/stylesheets/all.css.scss */
   0% {
     -moz-transform: scale(0);
     opacity: 0; }
 
-  /* line 23, /Users/Hugo/git/huhspot.github.io/source/stylesheets/all.css.scss */
+  /* line 24, /Users/Hugo/git/huhspot.github.io/source/stylesheets/all.css.scss */
   50% {
     -moz-transform: scale(0);
     opacity: 0; }
 
-  /* line 27, /Users/Hugo/git/huhspot.github.io/source/stylesheets/all.css.scss */
+  /* line 28, /Users/Hugo/git/huhspot.github.io/source/stylesheets/all.css.scss */
   82.5% {
     -moz-transform: scale(1.03);
     -moz-animation-timing-function: ease-out;
     opacity: 1; }
 
-  /* line 32, /Users/Hugo/git/huhspot.github.io/source/stylesheets/all.css.scss */
+  /* line 33, /Users/Hugo/git/huhspot.github.io/source/stylesheets/all.css.scss */
   100% {
     -moz-transform: scale(1); } }
 
 @-o-keyframes bounceIn {
-  /* line 19, /Users/Hugo/git/huhspot.github.io/source/stylesheets/all.css.scss */
+  /* line 20, /Users/Hugo/git/huhspot.github.io/source/stylesheets/all.css.scss */
   0% {
     -o-transform: scale(0);
     opacity: 0; }
 
-  /* line 23, /Users/Hugo/git/huhspot.github.io/source/stylesheets/all.css.scss */
+  /* line 24, /Users/Hugo/git/huhspot.github.io/source/stylesheets/all.css.scss */
   50% {
     -o-transform: scale(0);
     opacity: 0; }
 
-  /* line 27, /Users/Hugo/git/huhspot.github.io/source/stylesheets/all.css.scss */
+  /* line 28, /Users/Hugo/git/huhspot.github.io/source/stylesheets/all.css.scss */
   82.5% {
     -o-transform: scale(1.03);
     opacity: 1; }
 
-  /* line 32, /Users/Hugo/git/huhspot.github.io/source/stylesheets/all.css.scss */
+  /* line 33, /Users/Hugo/git/huhspot.github.io/source/stylesheets/all.css.scss */
   100% {
     -o-transform: scale(1); } }
 
 @keyframes bounceIn {
-  /* line 19, /Users/Hugo/git/huhspot.github.io/source/stylesheets/all.css.scss */
+  /* line 20, /Users/Hugo/git/huhspot.github.io/source/stylesheets/all.css.scss */
   0% {
     transform: scale(0);
     opacity: 0; }
 
-  /* line 23, /Users/Hugo/git/huhspot.github.io/source/stylesheets/all.css.scss */
+  /* line 24, /Users/Hugo/git/huhspot.github.io/source/stylesheets/all.css.scss */
   50% {
     transform: scale(0);
     opacity: 0; }
 
-  /* line 27, /Users/Hugo/git/huhspot.github.io/source/stylesheets/all.css.scss */
+  /* line 28, /Users/Hugo/git/huhspot.github.io/source/stylesheets/all.css.scss */
   82.5% {
     transform: scale(1.03);
     animation-timing-function: ease-out;
     opacity: 1; }
 
-  /* line 32, /Users/Hugo/git/huhspot.github.io/source/stylesheets/all.css.scss */
+  /* line 33, /Users/Hugo/git/huhspot.github.io/source/stylesheets/all.css.scss */
   100% {
     transform: scale(1); } }
 
-/* line 37, /Users/Hugo/git/huhspot.github.io/source/stylesheets/all.css.scss */
+/* line 38, /Users/Hugo/git/huhspot.github.io/source/stylesheets/all.css.scss */
 .copy {
   text-align: center;
-  padding: 3em; }
+  padding: 5em; }
+
+/* line 43, /Users/Hugo/git/huhspot.github.io/source/stylesheets/all.css.scss */
+::selection {
+  color: #fff;
+  background: #689fb5; }
